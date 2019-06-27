@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.recipe.RecipeBookCoordinator">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar fx:id="myMenu" VBox.vgrow="NEVER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#addRecipe" text="New Recipe" />
+                    <MenuItem disable="true" mnemonicParsing="false" text="Search Recipe" />
+                    <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#deleteallRecipes" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#aboutRecipe"  text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <SplitPane dividerPositions="0.2" VBox.vgrow="ALWAYS">
+              <items>
+                  <VBox fx:id="recipeListBox">
+                     <children>
+                        <ListView fx:id="recipeList" prefHeight="300.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <ScrollPane fx:id="scrollPaneRecipe" fitToHeight="true" fitToWidth="true">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <VBox fx:id="recipeMain" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <HBox VBox.vgrow="NEVER">
+                                       <children>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="recipeTitle" text="Recipe" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Region HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="100.0" />
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="recipeCookTime">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox VBox.vgrow="NEVER">
+                                       <children>
+                                          <Label fx:id="recipeReview">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="recipeIngredients" wrapText="true">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="NEVER">
+                                       <children>
+                                          <Label fx:id="recipeDirections" wrapText="true">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Region VBox.vgrow="ALWAYS" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+              </items>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </SplitPane>
+            <HBox VBox.vgrow="NEVER">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label text="© Archana Vemula" textAlignment="RIGHT">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

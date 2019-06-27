@@ -1,0 +1,47 @@
+create database javabook;
+use javabook;
+
+
+select * from recipe;
+
+create table RECIPE(
+   INGREDIENTS VARCHAR(1000),
+   DIRECTIONS VARCHAR(1000),
+   COOKINGTIME VARCHAR(20),
+   REVIEW VARCHAR(20),
+   RECIPENAME VARCHAR(200)
+);
+
+<!--RECIPE Table statements--->
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values('Chicken',	
+'Ease of Prep.Loved the recipe but almost lost a finger with all the chopping? Give it one star so you can plan accordingly next time.Super easy = ""5"" happy stars
+?Prep Time.Sort and find the perfect recipe for the amount of time you have
+Calculates average prep time by cookbook so you know where to look','30 mins','2',
+'Jamaican Jerk Chicken');
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values('Kielbasa,Noodles',
+'Make night before','5','2','Pasta Salad');
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values('Sausage,Noodles',
+'Make night before','30 mins','3','Lasagna'	);
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values('Milk,Eggs,Corn, Meal',
+'Makes enough for 2 days','20 mins','2','Hearty Pancakes'	);
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values(
+'Vegetarian,Potatoes','Mash potatoes.Add veggies.','30mins','4','Summer Garden Couscous Salad'	);
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values(
+'Rice,Vegetarian,Beans,Eggs','Luke likes this one','30 mins','4','Squash Corn Chowder');
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values(
+'Sausage,Cheese','Use half whole wheat flour','45 mins','5','Rustic Italian Tortellini Soup');
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values('Noodles,Marinara Sauce',
+'Make dough night before','120 mins','5','Barley Beef Skillet');
+
+insert into RECIPE(INGREDIENTS,DIRECTIONS,COOKINGTIME,REVIEW,RECIPENAME) values(
+'Beef,Rice,Beans','Makes enough for 2 days','90 mins','4','Barley Beef Skillet'	);
+
+drop table RECIPE;
